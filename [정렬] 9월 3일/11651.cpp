@@ -6,7 +6,7 @@ using namespace std;
 
 int main() {
 
-	int n = 0;
+	//int n = 0;
 	cin >> n;
 	vector<vector<int>> arr;
 	arr.assign(n, vector<int>(2, 0));
