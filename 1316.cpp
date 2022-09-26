@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 
@@ -7,18 +7,18 @@ vector<bool> check;
 
 const int SIZE = 26;
 
-bool checker(string word) { //±×·ì ´Ü¾îÀÎÁö ¾Æ´ÑÁö Ã¼Å©ÇÏ´Â ÇÔ¼ö
-	char checkBefore = -1; //ÀÌÀü ¹®ÀÚ¸¦ ÀúÀåÇÏ´Â º¯¼ö
+bool checker(string word) { //ê·¸ë£¹ ë‹¨ì–´ì¸ì§€ ì•„ë‹Œì§€ ì²´í¬í•˜ëŠ” í•¨ìˆ˜
+	char checkBefore = -1; //ì´ì „ ë¬¸ìë¥¼ ì €ì¥í•˜ëŠ” ë³€ìˆ˜
 	check = vector<bool>(SIZE, false);
 
 
 	for (int i = 0; i < word.length(); i++) {
-		if (checkBefore != word[i]) { //ÀÌÀü ¹®ÀÚ¿Í ÇöÀç ¹®ÀÚ°¡ ´Ù¸¥µ¥
-			if (check[(int)word[i] - 97] == false) { //ÀÌÀü¿¡ ÇöÀç ¹®ÀÚ°¡ ³ª¿ÀÁö ¾Ê¾Ò´Ù¸é
-				check[(int)word[i] - 97] = true; //ÇöÀç ¹®ÀÚ°¡ ³ª¿Ô´Ù´Â »ç½ÇÀ» ÀúÀå
+		if (checkBefore != word[i]) { //ì´ì „ ë¬¸ìì™€ í˜„ì¬ ë¬¸ìê°€ ë‹¤ë¥¸ë°
+			if (check[(int)word[i] - 97] == false) { //ì´ì „ì— í˜„ì¬ ë¬¸ìê°€ ë‚˜ì˜¤ì§€ ì•Šì•˜ë‹¤ë©´
+				check[(int)word[i] - 97] = true; //í˜„ì¬ ë¬¸ìê°€ ë‚˜ì™”ë‹¤ëŠ” ì‚¬ì‹¤ì„ ì €ì¥
 			}
 			else {
-				return false; //ÀÌÀü¿¡ ÇöÀç ¹®ÀÚ°¡ ³ª¿Ô´Ù¸é false ¹İÈ¯
+				return false; //ì´ì „ì— í˜„ì¬ ë¬¸ìê°€ ë‚˜ì™”ë‹¤ë©´ false ë°˜í™˜
 			}
 		}
 

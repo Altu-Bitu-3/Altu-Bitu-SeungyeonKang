@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <list>
 #include <string>
 using namespace std;
@@ -8,11 +8,11 @@ list<char> ::iterator iter;
 
 void keyLogger(string input) {
 
-	//ÃÊ±âÈ­
+	//ì´ˆê¸°í™”
 	output.clear();
 	iter = output.begin();
 
-	//ÀÔ·Â¿¡ µû¸¥ °á°ú
+	//ì…ë ¥ì— ë”°ë¥¸ ê²°ê³¼
 	for (int i = 0; i < input.length(); i++) {
 		if (input[i] == '<') {
 			if (!(iter == output.begin())) {
@@ -34,7 +34,7 @@ void keyLogger(string input) {
 		}
 	}
 
-	for (iter = output.begin(); iter != output.end(); iter++) { //Ãâ·Â
+	for (iter = output.begin(); iter != output.end(); iter++) { //ì¶œë ¥
 		cout << *iter;
 	}
 	cout << '\n';
